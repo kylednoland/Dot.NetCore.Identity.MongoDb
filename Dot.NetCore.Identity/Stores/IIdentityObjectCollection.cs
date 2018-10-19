@@ -11,6 +11,6 @@ namespace Dot.NetCore.Identity.Stores
 		Task<TItem> CreateAsync(TItem obj);
 		Task UpdateAsync(TItem obj);
 		Task DeleteAsync(TItem obj);
-		Task<TItem> FindByIdAsync(Guid itemId);
+		Task<TItem> FindByIdAsync(string itemId);
 	}
 }

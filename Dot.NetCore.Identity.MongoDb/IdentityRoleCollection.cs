@@ -17,7 +17,7 @@ namespace Dot.NetCore.Identity.MongoDb
 			return await FirstOrDefaultAsync(x => x.NormalizedName == normalizedName);
 		}
 
-		public async Task<TRole> FindByIdAsync(Guid roleId)
+		public async Task<TRole> FindByIdAsync(string roleId)
 		{
 			return await FirstOrDefaultAsync(x => x.Id == roleId);
 		}

@@ -43,7 +43,7 @@ namespace Dot.NetCore.Identity.Service
 		}
 
 		[HttpGet("{itemId}")]
-		public async Task<TUser> FindByIdAsync(Guid itemId)
+		public async Task<TUser> FindByIdAsync(string itemId)
 		{
 			return await ExecuteWithLog(async () => await _Collection.FindByIdAsync(itemId));
 		}

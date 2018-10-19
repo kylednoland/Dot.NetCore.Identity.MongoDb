@@ -31,7 +31,7 @@ namespace Dot.NetCore.Identity.MongoDb
 
 		private IMongoCollection<TItem> MongoCollection { get; }
 
-		public async Task<TItem> FindByIdAsync(Guid itemId)
+		public async Task<TItem> FindByIdAsync(string itemId)
 		{
 			return await FirstOrDefaultAsync(item => item.Id == itemId);
 		}
