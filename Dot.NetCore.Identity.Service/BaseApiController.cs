@@ -25,7 +25,7 @@ namespace Dot.NetCore.Identity.Service
 			}
 			catch (Exception e)
 			{
-				Log.LogError($"Request  failed: {Request.Path}");
+				Log.LogError($"Request  failed: {Request.Path}. Error: {e.Message}");
 				throw;
 			}
 		}
