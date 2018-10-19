@@ -36,7 +36,7 @@ namespace Dot.NetCore.Identity.MongoDb
 			return await FirstOrDefaultAsync(item => item.Id == itemId);
 		}
 
-
+		#pragma warning disable CS1998
 		public async Task<IEnumerable<TItem>> GetAll()
 		{
 			return MongoCollection.AsQueryable();
