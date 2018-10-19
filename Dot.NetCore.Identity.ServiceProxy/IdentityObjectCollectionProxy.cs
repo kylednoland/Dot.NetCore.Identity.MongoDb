@@ -113,7 +113,7 @@ namespace Dot.NetCore.Identity.ServiceProxy
 			});
 		}
 
-		public async Task<TItem> FindByIdAsync(Guid itemId)
+		public async Task<TItem> FindByIdAsync(string itemId)
 		{
 			return await Execute<TItem>("{id}", r => { r.AddUrlSegment("id", itemId); });
 		}

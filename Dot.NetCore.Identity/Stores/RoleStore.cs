@@ -67,8 +67,8 @@ namespace Dot.NetCore.Identity.Stores
 
 		async Task<TRole> IRoleStore<TRole>.FindByIdAsync(string roleId, CancellationToken cancellationToken)
 		{
-			if (!Guid.TryParse(roleId, out var id)) throw new ApplicationException("Invalid role Id");
-			return await _collection.FindByIdAsync(id);
+			if (!roleId.IsGuid()) throw new ApplicationException("Invalid role Id");
+			return await _collection.FindByIdAsync(roleId);
 		}
 
 		async Task<TRole> IRoleStore<TRole>.FindByNameAsync(string normalizedRoleName, CancellationToken cancellationToken)

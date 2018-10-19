@@ -4,6 +4,6 @@ namespace Dot.NetCore.Identity.Model
 {
 	public abstract class IdentityObject
 	{
-		public Guid Id { get; set; } = Guid.NewGuid();
+		public string Id { get; set; } = Guid.NewGuid().ToString();
 	}
 }

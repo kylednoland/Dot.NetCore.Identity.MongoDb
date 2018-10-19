@@ -107,8 +107,8 @@ namespace Dot.NetCore.Identity.Stores
 
 		public Task<TUser> FindByIdAsync(string userId, CancellationToken cancellationToken)
 		{
-			if (!Guid.TryParse(userId, out var id)) throw new ApplicationException("Invalid user Id");
-			return _userCollection.FindByIdAsync(id);
+			if (!userId.IsGuid()) throw new ApplicationException("Invalid user Id");
+			return _userCollection.FindByIdAsync(userId.ToString());
 		}
 
 		public Task<TUser> FindByNameAsync(string normalizedUserName, CancellationToken cancellationToken)
