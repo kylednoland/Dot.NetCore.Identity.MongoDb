@@ -1,6 +1,8 @@
-# Microsoft.AspNetCore.Identity.Mongo
+# Dot.NetCore.Identity.MongoDb
 
 forked from matteofabbri/AspNetCore.Identity.Mongo and bwets/bwets.NetCore.Identity.MongoDb
+
+The main difference from bwets' repo is that this relies upon a Guid IdentityObject identifier that is reflected as a String type rather than a Guid type. In MongoDB this allows the use of a string _id field rather than MongoDB's representation of a Guid.
 
 # Usage
 
